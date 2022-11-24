@@ -55,25 +55,17 @@ describe("The Booking Salon", function () {
        
         assert.deepEqual({code: 'BroLA12'}, booked);
     });
- // it("should be return all the books by date", async function () {
+//  it("should be return all the books by date", async function () {
     
-    //     const booked = await booking.findAllBookings('2022-02-01');
+//         const booked = await booking.findAllBookings('2022-02-01');
 
        
-    //     assert.deepEqual(
-    //         'the_date: 2022-01-31T22:00:00.000Z'
-    //       , booked);
-    // });
+//         assert.deepEqual(
+//             'the_date: 2022-01-31T22:00:00.000Z'
+//           , booked);
+//     });
 
-    // it("should be return all the books by date", async function () {
-    
-    //     const booked = await booking.findAllBookings('2022-02-01');
-
-       
-    //     assert.deepEqual(
-    //         'the_date: 2022-01-31T22:00:00.000Z'
-    //       , booked);
-    // });
+   
 
     // it("should be able to allow a client to make a booking", async function () {
     //     // const client = await booking.findClient("make_up, Zeenat,2022-02-01,15:00:00");
@@ -85,22 +77,17 @@ describe("The Booking Salon", function () {
     // });
 
 
-    // it("should be able to get client booking(s)", async function () {
+    it("should be able to get client booking(s)", async function () {
 
-    //     const client1 = await booking.findClient("Lesedi");
-    //     const client2 = await booking.findClient("***");
+        const client1 = await booking.findClient("Lesedi");
         
-    //     const treatment1 = await booking.findTreatment("***");
-    //     const treatment2 = await booking.findTreatment("***");
-
-    //     await booking.booking(treatment1.id, client1.id, date, time);
-    //     await booking.booking(treatment2.id, client1.id, date, time);
-    //     await booking.booking(treatment1.id, client2.id, date, time);
-
-    //     const bookings = await booking.findAllBookings(client);
-
-    //     assert.equal([], clientBooking)
-    // })
+        const treatment1 = await booking.findTreatment('BroLA12');
+      
+       
+        assert.deepEqual({
+            code: 'BroLA12'
+          }, treatment1)
+    })
 
     // it("should be able to get bookings for a date", async function () {
     //     const client1 = await booking.findClient("***");
