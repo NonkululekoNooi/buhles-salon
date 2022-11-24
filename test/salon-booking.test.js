@@ -48,11 +48,37 @@ describe("The Booking Salon", function () {
         assert.deepEqual([{"phone_number": 277841253658 }], styli);
       
     });
+    it("should be return a treatment by code", async function () {
+    
+        const booked = await booking.findTreatment('BroLA12');
+
+       
+        assert.deepEqual({code: 'BroLA12'}, booked);
+    });
+ // it("should be return all the books by date", async function () {
+    
+    //     const booked = await booking.findAllBookings('2022-02-01');
+
+       
+    //     assert.deepEqual(
+    //         'the_date: 2022-01-31T22:00:00.000Z'
+    //       , booked);
+    // });
+
+    // it("should be return all the books by date", async function () {
+    
+    //     const booked = await booking.findAllBookings('2022-02-01');
+
+       
+    //     assert.deepEqual(
+    //         'the_date: 2022-01-31T22:00:00.000Z'
+    //       , booked);
+    // });
 
     // it("should be able to allow a client to make a booking", async function () {
-    //     const client = await booking.findClient("make_up, Zeenat,2022-02-01,15:00:00");
+    //     // const client = await booking.findClient("make_up, Zeenat,2022-02-01,15:00:00");
 
-    //     const booked = await booking.makeBooking(treatmentId, client.id, date, time);
+    //     const booked = await booking.makeBooking(2022-02-01, '15:00:00',1, 4,3);
 
     //     const bookings = await booking.findClientBookings(client.id);
     //     assert.equal([], booked);

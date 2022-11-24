@@ -48,10 +48,11 @@ async function findAllBookings(date){
 
 async function findClientBookings(clientId){
 
-    let client_id = await db.oneOrNone('Select id from client where firstName=$1',
+    let client_id = await db.oneOrNone(`select first_name.client, treatment.treatment_name from booking 
+    inner join client on booking.client_id= client.id
+    inner join treatment on booking.treatment.id = treatment.id where treatment_name= $1`
    [clientId])
    return client_id
-
 }
 
 
