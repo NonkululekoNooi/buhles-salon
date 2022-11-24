@@ -50,17 +50,18 @@ describe("The Booking Salon", function () {
     });
 
     // it("should be able to allow a client to make a booking", async function () {
-    //     const client = await booking.findClient("***");
+    //     const client = await booking.findClient("make_up, Zeenat,2022-02-01,15:00:00");
 
-    //     const booking = await booking.makeBooking(treatmentId, client.id, date, time);
+    //     const booked = await booking.makeBooking(treatmentId, client.id, date, time);
 
     //     const bookings = await booking.findClientBookings(client.id);
-    //     assert.equal([], bookings);
+    //     assert.equal([], booked);
     // });
+
 
     // it("should be able to get client booking(s)", async function () {
 
-    //     const client1 = await booking.findClient("***");
+    //     const client1 = await booking.findClient("Lesedi");
     //     const client2 = await booking.findClient("***");
         
     //     const treatment1 = await booking.findTreatment("***");
