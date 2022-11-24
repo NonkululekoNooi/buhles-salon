@@ -19,6 +19,7 @@ describe("The Booking Salon", function () {
     beforeEach(async function () {
 
         await db.none(`delete from booking`);
+        await db.none(`delete from treatment`);
 
     });
 
